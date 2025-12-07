@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>401 — Unauthorized</title>
+
+  <!-- System font stack (nhanh, hỗ trợ tiếng Việt) -->
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#0b86ff;
+      --accent-600:#0666d6;
+      --muted:#6b7280;
+      --danger:#d32f2f;
+      --radius:14px;
+      --maxw:920px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      color:#111827;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+
+    .oh-401-root{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(12,20,30,0.08);
+      overflow:hidden;
+      display:flex;
+      gap:0;
+      align-items:stretch;
+    }
+
+    /* Cột trái: hình minh họa */
+    .oh-401-visual{
+      flex:0 0 360px;
+      min-height:320px;
+      background:linear-gradient(135deg, rgba(11,134,255,0.06), rgba(6,102,214,0.02));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+    }
+    .oh-401-visual svg{width:220px;height:220px;opacity:0.96}
+
+    /* Cột phải: nội dung */
+    .oh-401-body{
+      flex:1;
+      padding:34px 36px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:16px;
+    }
+    .oh-401-badge{
+      display:inline-block;
+      background: rgba(11,134,255,0.08);
+      color:var(--accent-600);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+    }
+    h1{margin:6px 0 0;font-size:22px;line-height:1.1}
+    p.lead{margin:8px 0 0;color:var(--muted);font-size:15px}
+    .oh-401-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;
+      text-decoration:none;color:white;background:var(--accent);
+      box-shadow:0 6px 18px rgba(11,134,255,0.12);
+    }
+    .btn.secondary{
+      background:transparent;color:var(--accent-600);
+      border:1px solid rgba(11,134,255,0.12);
+      box-shadow:none;
+    }
+    .btn.ghost{background:transparent;color:var(--muted);border:1px dashed rgba(0,0,0,0.06)}
+    .oh-401-help{margin-top:10px;color:var(--muted);font-size:13px}
+    .oh-401-meta{margin-top:12px;color:#9aa3b2;font-size:12px}
+
+    /* Footer nhỏ */
+    .oh-401-footer{
+      display:flex;gap:12px;align-items:center;margin-top:12px;color:var(--muted);font-size:13px;
+    }
+
+    /* Responsive: chuyển sang dọc ở màn nhỏ */
+    @media (max-width:880px){
+      .oh-401-root{flex-direction:column}
+      .oh-401-visual{flex:0 0 auto;padding:20px}
+      .oh-401-body{padding:20px}
+    }
+
+    /* Icon nhỏ helper */
+    .oh-icon{
+      display:inline-flex;width:20px;height:20px;align-items:center;justify-content:center;border-radius:6px;background:rgba(11,134,255,0.1);color:var(--accent-600);font-weight:700;
+    }
+  </style>
+</head>
+<body>
+  <main class="oh-401-root" role="main" aria-labelledby="oh401_title">
+    <!-- Cột trái: hình minh họa -->
+    <div class="oh-401-visual" aria-hidden="true">
+      <!-- SVG: Khiên/khoá minh hoạ bảo mật -->
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#0b86ff" stop-opacity="0.95"/>
+            <stop offset="1" stop-color="#0666d6" stop-opacity="0.95"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <rect width="64" height="64" rx="12" fill="url(#g)"/>
+          <g transform="translate(16 14)">
+            <rect width="32" height="28" rx="4" fill="#fff" opacity="0.06"/>
+            <path d="M16 0c2.8 0 5 2.2 5 5v3h-10V5c0-2.8 2.2-5 5-5z" fill="#fff" opacity="0.14"/>
+            <rect x="10" y="11" width="12" height="8" rx="1.2" fill="#fff"/>
+            <circle cx="16" cy="15" r="1.2" fill="#0666d6"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Cột phải: nội dung thông báo, hành động -->
+    <div class="oh-401-body" id="oh401_content">
+      <span class="oh-401-badge">401 • Unauthorized</span>
+      <h1 id="oh401_title">Truy cập bị từ chối</h1>
+      <p class="lead">Bạn không có quyền truy cập vào tài nguyên này. Vui lòng đăng nhập với tài khoản hợp lệ để tiếp tục.</p>
+
+      <div class="oh-401-actions" role="group" aria-label="Actions">
+        <!-- Nút đăng nhập -->
+        <!-- <a class="btn" id="oh401_login" href="#">Đăng nhập</a> -->
+
+        <!-- Nút thử lại -->
+        <button class="btn secondary" id="oh401_retry" type="button">Thử lại</button>
+
+        <!-- Nút liên hệ quản trị viên -->
+        <a class="btn ghost" id="oh401_contact" href="#">Liên hệ quản trị</a>
+      </div>
+
+      <div class="oh-401-help">
+        <strong>Lưu ý:</strong> Nếu server sử dụng HTTP Basic Authentication (trình duyệt sẽ hiện cửa sổ yêu cầu mật khẩu), bạn cần đăng nhập ở cửa sổ đó — trang này chỉ hiển thị khi server trả trang lỗi 401 thay vì bật dialog Basic Auth.
+      </div>
+
+      <div class="oh-401-meta">
+        <div class="oh-401-footer">
+          <div class="oh-icon">!</div>
+          <div>
+            <div>URL: <code id="oh401_url"></code></div>
+            <div style="margin-top:6px">Thời gian: <span id="oh401_time"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      const urlEl = document.getElementById('oh401_url');
+      const timeEl = document.getElementById('oh401_time');
+      const retryBtn = document.getElementById('oh401_retry');
+      const loginBtn = document.getElementById('oh401_login');
+
+      // Gán thông tin meta: url & thời gian truy cập
+      urlEl.textContent = window.location.href;
+      timeEl.textContent = (new Date()).toLocaleString();
+
+      // Xử lý nút Thử lại (reload trang, nếu có credential sẵn sẽ gửi lại)
+      retryBtn.addEventListener('click', function(){
+        // Hiệu ứng visual khi bấm
+        retryBtn.textContent = 'Đang thử...';
+        setTimeout(() => {
+          // Tải lại trang — nếu yêu cầu Basic Auth, trình duyệt có thể hiện popup
+          window.location.reload();
+        }, 180);
+      });
+
+      // Tuỳ chọn: mở đăng nhập ở tab mới thay vì tab hiện tại
+      // loginBtn.target = '_blank';
+
+      // Trợ năng: tự động focus tiêu đề chính khi tải trang
+      document.getElementById('oh401_title').focus && document.getElementById('oh401_title').setAttribute('tabindex', '-1');
+      document.getElementById('oh401_title').focus();
+    })();
+  </script>
+</body>
+</html>
