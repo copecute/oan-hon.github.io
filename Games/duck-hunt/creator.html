@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+    <title>DuckHuntJS Level Creator</title>
+    <meta name="description"
+          content="An open source, web based, responsive implementation of Duck Hunt in canvas or webgl depending on your client.">
+    <meta name="author" content="Matt Surabian">
+    <style>
+        body {
+            background-color: #64b0ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        p {
+            font-size: 2.25em;
+        }
+
+        input {
+            font-size: 2.25em;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        button[type=submit] {
+            font-size: 2.25em;
+            border-radius: 12px;
+            grid-column: span;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ffffff;
+        }
+
+        label {
+            font-size: 2.25em;
+            display: block;
+        }
+
+        small {
+            font-size: 1.2em;
+        }
+
+        form div {
+            margin: 10px 0;
+        }
+
+        .form-grid {
+            display: block;
+        }
+
+        ul {
+            overflow: visible;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 700px),(max-height: 500px) {
+            body {
+                font-size: 9px;
+            }
+        }
+
+        @media (min-width: 700px) and (min-height: 500px) {
+            body {
+                font-size: 12px;
+            }
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<h1>Công cụ tạo cấp độ DuckHuntJS</h1>
+<p>
+  <strong>Việc gửi biểu mẫu này sẽ tạo ra một liên kết đến cấp độ DuckHuntJS tùy chỉnh mà bạn có thể chia sẻ với bạn bè!</strong><br>
+Giới hạn trường nhằm mục đích tránh sự cố trình duyệt do quá tải hiển thị và thể hiện giá trị thể thao.<br>
+</p>
+<form action="index.html">
+    <div class="form-grid">
+        <div><label for="title">tiêu đề cấp độ:</label> <input type="text" id="title" name="title"></div>
+        <div><label for="waves">số đợt*:</label> <input type="number" id="waves" name="waves" min="1" max="100"
+                                                       placeholder="1-100" value="3" required></div>
+        <div><label for="ducks">vịt mỗi đợt*:</label> <input type="number" id="ducks" name="ducks" min="1" max="5000"
+                                                       placeholder="1-5000" value="50" required></div>
+        <div><label for="points">điểm cho mỗi con vịt*:</label> <input type="number" id="points" name="points" min="1" max="1000"
+                                                         placeholder="1-1000" value="100" required></div>
+        <div><label for="bullets">số viên đạn mỗi đợt*:</label> <input type="number" id="bullets" name="bullets" min="1"
+                                                           max="10000" placeholder="1-10000" value="100" required>
+        </div>
+        <div><label for="radius">bán kính vụ nổ*:</label><input type="number" id="radius" name="radius" min="30"
+                                                              max="200" placeholder="30-200" value="60"></div>
+        <div><label for="speed">tốc độ vịt*:</label> <input type="number" id="speed" name="speed" min="1" max="10"
+                                                       placeholder="1-10" value="6" required></div>
+        <div><label for="time">thời gian trên mỗi đợt:</label> <input type="number" id="time" name="time" min="10" max="120"
+                                                    placeholder="10-120" value="30"></div>
+    </div>
+    <br><br>
+    <button type="submit">Tạo cấp độ</button>
+</form>
+
+<br><br>
+<small>Việc xác thực giới hạn trường không được thực hiện trong trò chơi, vì vậy nếu bạn thực sự muốn xem điều gì xảy ra khi bạn <a
+
+href="index.html?title=1%20Click%20Challenge&ducks=1000&radius=1000">bắn
+1000 con vịt cùng một lúc</a>, bạn có thể làm điều đó.</small>
+<br><br>
+<h2>Cấp độ huyền thoại</h2>
+<ul>
+    <li><a href="index.html?title=10+for+10&waves=10&ducks=1&points=1&bullets=1&radius=30&speed=10&time=10">10 cho 10</a></li>
+    <li><a href="index.html?title=Splits-ville&waves=5&ducks=2&points=100&bullets=1&radius=100&speed=6&time=30">Splits-ville</a></li>
+    <li><a href="index.html?title=Marathon&waves=26&ducks=2&points=100&bullets=2&radius=60&speed=6&time=5">Marathon</a></li>
+</ul>
+</body>
+</html>

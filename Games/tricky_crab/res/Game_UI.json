@@ -1,0 +1,506 @@
+{
+  "ID": "8acc0db0-4300-47d0-b135-48f3c2045735",
+  "Version": "3.10.0.0",
+  "Name": "Game_UI",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 1115,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 76,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 1.0
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -568.0,
+            "RightMargin": -568.0,
+            "BottomMargin": -80.0,
+            "Tag": 1116,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "png/UI/pause_pressed.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "png/UI/pause_pressed.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "png/UI/pause_btn.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 36,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 568.0,
+                  "Y": 38.34
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.4793
+                },
+                "PreSize": {
+                  "X": 0.0581,
+                  "Y": 0.825
+                },
+                "LeftMargin": 535.0,
+                "RightMargin": 535.0,
+                "TopMargin": 8.66,
+                "BottomMargin": 5.34,
+                "Tag": 1117,
+                "ActionTag": -943817546,
+                "Size": {
+                  "X": 66.0,
+                  "Y": 66.0
+                },
+                "Name": "Pause_Button",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 178,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 138.9299,
+                  "Y": 10.4924
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1223,
+                  "Y": 0.1312
+                },
+                "PreSize": {
+                  "X": 0.2421,
+                  "Y": 0.6875
+                },
+                "LeftMargin": 138.9299,
+                "RightMargin": 722.0701,
+                "TopMargin": 14.5076,
+                "BottomMargin": 10.4924,
+                "Tag": 1118,
+                "Children": [
+                  {
+                    "FontSize": 40,
+                    "LabelText": "SCORE :",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "bang whack pow.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 72.0796,
+                      "Y": 24.6869
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 235,
+                      "B": 190
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.2621,
+                      "Y": 0.4489
+                    },
+                    "PreSize": {
+                      "X": 0.4364,
+                      "Y": 0.7273
+                    },
+                    "LeftMargin": 12.0796,
+                    "RightMargin": 142.9204,
+                    "TopMargin": 10.3131,
+                    "BottomMargin": 4.6869,
+                    "Tag": 1121,
+                    "ActionTag": -592218683,
+                    "Size": {
+                      "X": 120.0,
+                      "Y": 40.0
+                    },
+                    "Name": "Score",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 40,
+                    "LabelText": "123456",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "bang whack pow.ttf",
+                      "Plist": ""
+                    },
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 207.7177,
+                      "Y": 22.6712
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 235,
+                      "B": 190
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.7553,
+                      "Y": 0.4122
+                    },
+                    "PreSize": {
+                      "X": 0.4727,
+                      "Y": 0.9091
+                    },
+                    "LeftMargin": 142.7177,
+                    "RightMargin": 2.2823,
+                    "TopMargin": 7.3288,
+                    "BottomMargin": -2.3288,
+                    "Tag": 1122,
+                    "ActionTag": -639508199,
+                    "Size": {
+                      "X": 130.0,
+                      "Y": 50.0
+                    },
+                    "Name": "Score_Text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1070592441,
+                "Size": {
+                  "X": 275.0,
+                  "Y": 55.0
+                },
+                "Name": "Score_Panel",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 178,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 722.2404,
+                  "Y": 10.4924
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6358,
+                  "Y": 0.1312
+                },
+                "PreSize": {
+                  "X": 0.2421,
+                  "Y": 0.6875
+                },
+                "LeftMargin": 722.2404,
+                "RightMargin": 138.7596,
+                "TopMargin": 14.5076,
+                "BottomMargin": 10.4924,
+                "Tag": 1120,
+                "Children": [
+                  {
+                    "FontSize": 40,
+                    "LabelText": "BEST :",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "bang whack pow.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 64.1668,
+                      "Y": 25.7618
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 235,
+                      "B": 190
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.2333,
+                      "Y": 0.4684
+                    },
+                    "PreSize": {
+                      "X": 0.3418,
+                      "Y": 0.7273
+                    },
+                    "LeftMargin": 17.1668,
+                    "RightMargin": 163.8332,
+                    "TopMargin": 9.2382,
+                    "BottomMargin": 5.7618,
+                    "Tag": 1123,
+                    "ActionTag": 1856724027,
+                    "Size": {
+                      "X": 94.0,
+                      "Y": 40.0
+                    },
+                    "Name": "Best",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 40,
+                    "LabelText": "123456",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "bang whack pow.ttf",
+                      "Plist": ""
+                    },
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 205.8045,
+                      "Y": 22.6712
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 235,
+                      "B": 190
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.7484,
+                      "Y": 0.4122
+                    },
+                    "PreSize": {
+                      "X": 0.4727,
+                      "Y": 0.9091
+                    },
+                    "LeftMargin": 140.8045,
+                    "RightMargin": 4.1955,
+                    "TopMargin": 7.3288,
+                    "BottomMargin": -2.3288,
+                    "Tag": 1124,
+                    "ActionTag": 882745297,
+                    "Size": {
+                      "X": 130.0,
+                      "Y": 50.0
+                    },
+                    "Name": "Best_Text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1129799515,
+                "Size": {
+                  "X": 275.0,
+                  "Y": 55.0
+                },
+                "Name": "Best_Panel",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": -791799606,
+            "Size": {
+              "X": 1136.0,
+              "Y": 80.0
+            },
+            "Name": "UI_Panel",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "bang whack pow.ttf",
+        "png/UI/pause_btn.png",
+        "png/UI/pause_pressed.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}
