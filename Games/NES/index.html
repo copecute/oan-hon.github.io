@@ -113,7 +113,7 @@ h1 {
   let allGames = [];
 
   try {
-    const res = await fetch('nes/list-rom.json');
+    const res = await fetch('list-rom.json');
     allGames = await res.json();
     renderGames(allGames);
   } catch (e) {
