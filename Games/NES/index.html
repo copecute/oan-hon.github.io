@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>NES Arcade Center</title>
+<style>
+:root {
+  --primary: #3b82f6;
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #f8fafc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-bottom: 40px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  z-index: 100;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.search-box {
+  width: 90%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: white;
+  outline: none;
+}
+
+#game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.game-item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: 1px solid #334155;
+  position: relative;
+}
+
+.game-item:active {
+  transform: scale(0.95);
+}
+
+.game-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+.game-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.game-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>NES Arcade</h1>
+  <input type="text" id="search" class="search-box" placeholder="Tìm kiếm game...">
+</header>
+
+<div id="game-list">
+  </div>
+
+<script>
+(async () => {
+  const gameListEl = document.getElementById('game-list');
+  const searchInput = document.getElementById('search');
+  
+  let allGames = [];
+
+  try {
+    const res = await fetch('nes/list-rom.json');
+    allGames = await res.json();
+    renderGames(allGames);
+  } catch (e) {
+    gameListEl.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">Không thể tải danh sách game.</p>';
+  }
+
+  function renderGames(list) {
+    gameListEl.innerHTML = '';
+    list.forEach(game => {
+      const card = document.createElement('div');
+      card.className = 'game-item';
+      card.innerHTML = `
+        <img src="${game.thumbnail || 'https://via.placeholder.com/120x90?text=NES'}" loading="lazy">
+        <div class="game-info">
+          <div class="game-name">${game.name}</div>
+        </div>
+      `;
+      
+      card.onclick = () => {
+        setTimeout(() => {
+          window.location.href = `emulator.html?rom=${encodeURIComponent(game.rom)}&name=${encodeURIComponent(game.name)}`;
+        }, 0);
+      };
+      
+      gameListEl.appendChild(card);
+    });
+  }
+
+  // Chức năng tìm kiếm
+  searchInput.oninput = (e) => {
+    const term = e.target.value.toLowerCase();
+    const filtered = allGames.filter(g => g.name.toLowerCase().includes(term));
+    renderGames(filtered);
+  };
+})();
+</script>
+</body>
+</html>
